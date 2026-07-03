@@ -1,0 +1,29 @@
+.topbar {
+  background-color: var(--gray-bg);
+  padding: 8px 0;
+  font-size: 12px;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--gray-border);
+}
+
+.topbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar-highlight {
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.topbar-right a {
+  margin: 0 10px;
+}
+.topbar-right a:hover {
+  color: var(--primary);
+}
+
+.separator {
+  color: #ddd;
+}
