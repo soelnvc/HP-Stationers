@@ -13,8 +13,8 @@ const Navbar = () => {
         </button>
 
         <div className="logo">
-          <span className="logo-icon">S</span>
-          <span className="logo-text">stationers</span>
+          <span className="logo-icon">HS</span>
+          <span className="logo-text">Himachal Stationers</span>
         </div>
         <nav className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
           <a href="#" className="active" onClick={() => setIsMenuOpen(false)}>Home</a>

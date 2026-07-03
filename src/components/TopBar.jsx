@@ -6,7 +6,7 @@ const TopBar = () => {
     <div className="topbar">
       <div className="container topbar-inner">
         <div className="topbar-left">
-          Call Us: 1-800-44-000-00
+          Call / Whatsapp: +91 98722 66092
         </div>
         <div className="topbar-center">
           <span className="topbar-highlight">JOIN US</span> TO GET 10% OFF

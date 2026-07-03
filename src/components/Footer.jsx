@@ -9,8 +9,8 @@ const Footer = () => {
         <div className="footer-top">
           <div className="footer-brand">
             <div className="logo" style={{marginBottom: '20px'}}>
-              <span className="logo-icon">S</span>
-              <span className="logo-text">stationers</span>
+              <span className="logo-icon">H</span>
+              <span className="logo-text">Himachal Stationers</span>
             </div>
             <p className="footer-text">
               250000+ Students & Teachers.<br/>
@@ -56,7 +56,7 @@ const Footer = () => {
             <h4 className="footer-heading">CONTACT INFO</h4>
             <div className="contact-item highlight">
               <Phone size={18} className="contact-icon" />
-              <span>1-800-44-000-00</span>
+              <span>+91 98722 66092</span>
             </div>
             <div className="contact-item">
               <MapPin size={18} className="contact-icon" />
@@ -64,13 +64,13 @@ const Footer = () => {
             </div>
             <div className="contact-item">
               <Mail size={18} className="contact-icon" />
-              <span>care@stationers.com</span>
+              <span>himachalstationers@gmail.com</span>
             </div>
           </div>
         </div>
         
         <div className="footer-bottom">
-          <p>&copy; 2026 Stationers. All Rights Reserved.</p>
+          <p>&copy; 2026 Himachal Stationers. All Rights Reserved.</p>
           <div className="payment-icons">
             <span>VISA</span>
             <span>MasterCard</span>
