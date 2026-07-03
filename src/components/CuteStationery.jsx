@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ProductGrid.css';
 
 const sections = [
@@ -9,15 +9,26 @@ const sections = [
 ];
 
 const CuteStationery = () => {
+  const [activeFilter, setActiveFilter] = useState('Bestsellers');
+
   return (
     <section className="section-padding">
       <div className="container">
         <h2 className="section-title">Look whats performing!</h2>
         <div className="product-filters">
-          <a href="#" className="active">Bestsellers</a>
-          <a href="#">Stationary</a>
-          <a href="#">Cards</a>
-          <a href="#">Paperwork</a>
+          {['Bestsellers', 'Stationary', 'Cards', 'Paperwork'].map(filter => (
+            <a
+              key={filter}
+              href="#"
+              className={activeFilter === filter ? 'active' : ''}
+              onClick={(e) => {
+                e.preventDefault();
+                setActiveFilter(filter);
+              }}
+            >
+              {filter}
+            </a>
+          ))}
         </div>
         <div className="product-grid">
           {sections.map(section => (

@@ -4,6 +4,7 @@ import './Navbar.css';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState('Home');
 
   return (
     <header className="navbar">
@@ -17,11 +18,20 @@ const Navbar = () => {
           <span className="logo-text">Himachal Stationers</span>
         </div>
         <nav className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
-          <a href="#" className="active" onClick={() => setIsMenuOpen(false)}>Home</a>
-          <a href="#" onClick={() => setIsMenuOpen(false)}>Stationary</a>
-          <a href="#" onClick={() => setIsMenuOpen(false)}>Cards</a>
-          <a href="#" onClick={() => setIsMenuOpen(false)}>Paper</a>
-          <a href="#" onClick={() => setIsMenuOpen(false)}>Contact</a>
+          {['Home', 'Stationary', 'Cards', 'Paper', 'Contact'].map((link) => (
+            <a
+              key={link}
+              href="#"
+              className={activeLink === link ? 'active' : ''}
+              onClick={(e) => {
+                e.preventDefault();
+                setActiveLink(link);
+                setIsMenuOpen(false);
+              }}
+            >
+              {link}
+            </a>
+          ))}
         </nav>
       </div>
     </header>

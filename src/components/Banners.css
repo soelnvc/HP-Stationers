@@ -16,8 +16,20 @@
   text-align: center;
   padding: 40px;
   overflow: hidden;
+}
+
+.banner-item::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
   background-size: cover;
   background-position: center;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  z-index: 0;
+}
+
+.banner-item:hover::before {
+  transform: scale(1.08);
 }
 
 .banner-overlay {
@@ -65,6 +77,8 @@
 /* Specific Banners */
 .banner-1 {
   grid-column: span 1;
+}
+.banner-1::before {
   background-color: #f3f3f3;
   background-image: url('https://images.unsplash.com/photo-1605364850742-03c03565e38d?auto=format&fit=crop&q=80&w=600');
 }
@@ -74,18 +88,23 @@
   background-color: var(--primary);
   color: white;
 }
+.banner-2::before {
+  background-color: var(--primary);
+}
 .banner-2 h3, .banner-2 p, .banner-2 .banner-tag {
   color: white;
 }
 
 .banner-3 {
   grid-column: span 2;
-  background-color: #f6f8f7;
-  background-image: url('https://images.unsplash.com/photo-1585336261022-680e295ce3fe?auto=format&fit=crop&q=80&w=800');
   align-items: center;
   justify-content: flex-start;
   padding-left: 80px;
   text-align: left;
+}
+.banner-3::before {
+  background-color: #f6f8f7;
+  background-image: url('https://images.unsplash.com/photo-1585336261022-680e295ce3fe?auto=format&fit=crop&q=80&w=800');
 }
 .banner-3 .banner-content {
   align-items: flex-start;
@@ -93,12 +112,14 @@
 
 .banner-4 {
   grid-column: span 2;
-  background-color: #e5ecd9; /* light green */
-  background-image: url('https://images.unsplash.com/photo-1596443686812-a74075b9bd7f?auto=format&fit=crop&q=80&w=800');
   align-items: center;
   justify-content: flex-start;
   padding-left: 80px;
   text-align: left;
+}
+.banner-4::before {
+  background-color: #e5ecd9;
+  background-image: url('https://images.unsplash.com/photo-1596443686812-a74075b9bd7f?auto=format&fit=crop&q=80&w=800');
 }
 .banner-4 .banner-content {
   align-items: flex-start;
@@ -106,8 +127,10 @@
 
 .banner-5 {
   grid-column: span 2;
-  background-color: #222;
   color: white;
+}
+.banner-5::before {
+  background-color: #222;
   background-image: url('https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=800');
 }
 .banner-5 h3, .banner-5 p, .banner-5 .banner-tag {
