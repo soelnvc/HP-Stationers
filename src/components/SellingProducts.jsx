@@ -15,7 +15,7 @@ const SellingProducts = () => {
         <h2 className="section-title" style={{marginBottom: '10px'}}>Selling Products</h2>
         <p style={{textAlign: 'center', color: 'var(--text-muted)', marginBottom: '50px'}}>Looked up one of the more obscure Latin words, consectetur,<br/>from a Lorem Ipsum passage.</p>
         
-        <div className="product-grid" style={{gridTemplateColumns: 'repeat(5, 1fr)'}}>
+        <div className="product-grid five-cols">
           {products.map(p => (
             <div key={p.id} className="product-card">
               <div className="product-img-wrapper" style={{height: '200px'}}>

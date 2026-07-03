@@ -85,7 +85,6 @@
 .icon-btn:hover {
   color: var(--primary);
 }
-
 .badge-btn .badge {
   position: absolute;
   top: -8px;
@@ -100,4 +99,61 @@
   justify-content: center;
   border-radius: 50%;
   font-weight: 600;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--dark);
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 992px) {
+  .menu-toggle {
+    display: block;
+    z-index: 101;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 280px;
+    height: 100vh;
+    background-color: var(--light);
+    flex-direction: column;
+    padding: 100px 30px 40px;
+    gap: 20px;
+    box-shadow: 4px 0 15px rgba(0,0,0,0.1);
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 100;
+    align-items: flex-start;
+  }
+
+  .nav-links.open {
+    left: 0;
+  }
+
+  .nav-links a {
+    font-size: 18px;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--gray-border);
+  }
+
+  .search-bar {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo-text {
+    display: none;
+  }
+  .nav-actions {
+    gap: 15px;
+  }
 }

@@ -27,3 +27,13 @@
 .separator {
   color: #ddd;
 }
+
+@media (max-width: 768px) {
+  .topbar-left, .topbar-right {
+    display: none;
+  }
+  .topbar-inner {
+    justify-content: center;
+    text-align: center;
+  }
+}

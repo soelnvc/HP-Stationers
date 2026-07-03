@@ -1,22 +1,28 @@
-import React from 'react';
-import { Search, User, Heart, ShoppingBag } from 'lucide-react';
+import React, { useState } from 'react';
+import { Search, User, Heart, ShoppingBag, Menu, X } from 'lucide-react';
 import './Navbar.css';
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <header className="navbar">
       <div className="container navbar-inner">
+        <button className="menu-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+
         <div className="logo">
           <span className="logo-icon">S</span>
           <span className="logo-text">stationers</span>
         </div>
-        <nav className="nav-links">
-          <a href="#" className="active">Home</a>
-          <a href="#">Shop</a>
-          <a href="#">Features</a>
-          <a href="#">Pages</a>
-          <a href="#">Blog</a>
-          <a href="#">Contact</a>
+        <nav className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
+          <a href="#" className="active" onClick={() => setIsMenuOpen(false)}>Home</a>
+          <a href="#" onClick={() => setIsMenuOpen(false)}>Shop</a>
+          <a href="#" onClick={() => setIsMenuOpen(false)}>Features</a>
+          <a href="#" onClick={() => setIsMenuOpen(false)}>Pages</a>
+          <a href="#" onClick={() => setIsMenuOpen(false)}>Blog</a>
+          <a href="#" onClick={() => setIsMenuOpen(false)}>Contact</a>
         </nav>
         <div className="nav-actions">
           <div className="search-bar">

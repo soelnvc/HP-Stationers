@@ -26,6 +26,34 @@
   gap: 30px;
 }
 
+.product-grid.five-cols {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+@media (max-width: 1200px) {
+  .product-grid.five-cols {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .product-grid.five-cols {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .product-grid.five-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid.five-cols {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 .product-card {
   text-align: center;
   cursor: pointer;
